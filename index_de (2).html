@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Z.M Kunsthaus</title>
+  <meta name="description" content="Z.M Kunsthaus — Ein kreativer Raum für Kunst, Design und innovative Lösungen." />
+  <link rel="icon" href="data:," />
+  <style>
+    :root{ --main:#b57edc; --dark:#6a3f9e; }
+    body{margin:0;font-family:Arial,system-ui,sans-serif;line-height:1.6;color:#222;background:#f8f7fb}
+    header{background:var(--main);color:#fff;padding:28px 16px;text-align:center}
+    .container{max-width:1000px;margin:24px auto;padding:0 16px}
+    h1{margin:0 0 8px;font-size:1.8rem}
+    p.lead{margin:0 0 16px;color:#fff;font-size:1.1rem}
+    .services{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-top:18px}
+    .card{background:#fff;padding:14px;border-radius:8px;box-shadow:0 1px 4px rgba(0,0,0,0.08)}
+    .cta{display:inline-block;margin-top:12px;padding:10px 16px;border-radius:6px;background:var(--dark);color:#fff;text-decoration:none}
+    footer{margin:28px 0;padding:18px 16px;text-align:center;color:#666;font-size:0.9rem}
+    form{display:grid;gap:8px}
+    input,textarea{padding:10px;border:1px solid #ddd;border-radius:6px;font-size:1rem;width:100%}
+    button{padding:10px 14px;border:none;border-radius:6px;background:var(--main);color:#fff;font-size:1rem;cursor:pointer}
+    button:hover{background:var(--dark)}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>Z.M Kunsthaus</h1>
+      <p class="lead">Ein kreativer Raum für Kunst, Design und maßgeschneiderte Lösungen.</p>
+      <a class="cta" href="#contact">Kontakt</a>
+    </div>
+  </header>
+
+  <main class="container">
+    <section>
+      <h2>Unsere Leistungen</h2>
+      <div class="services">
+        <div class="card">
+          <h3>Acrylgemälde</h3>
+          <p>Kreative Acrylmalereien mit einzigartigen Farben.</p>
+        </div>
+        <div class="card">
+          <h3>Malkurse</h3>
+          <p>Zeichen- und Malkurse für alle Niveaus.</p>
+        </div>
+        <div class="card">
+          <h3>Glasmalerei</h3>
+          <p>Kunstvolle Glasmalerei mit kreativen Mustern.</p>
+        </div>
+        <div class="card">
+          <h3>Papiermodelle</h3>
+          <p>Künstlerische Papierfiguren mit besonderem Stil.</p>
+        </div>
+        <div class="card">
+          <h3>Kunst & Kreativität</h3>
+          <p>Alles, was mit Kunst und Kreativität zu tun hat, an einem Ort.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" style="margin-top:22px">
+      <h2>Kontakt</h2>
+      <form action="https://formspree.io/f/your-form-id" method="POST">
+        <input type="text" name="name" placeholder="Name" required>
+        <input type="email" name="email" placeholder="E-Mail" required>
+        <textarea name="message" rows="5" placeholder="Ihre Nachricht" required></textarea>
+        <button type="submit">Senden</button>
+      </form>
+      <p style="margin-top:8px;color:#555">Oder rufen Sie uns an: <strong>+49 152 25732864</strong></p>
+    </section>
+  </main>
+
+  <footer>
+    © <span id="year"></span> Z.M Kunsthaus — Alle Rechte vorbehalten.
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
